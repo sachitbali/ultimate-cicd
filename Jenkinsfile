@@ -14,7 +14,7 @@ pipeline{
             }
             stage('test the code'){
                 environment{
-                    SONAT_URL = "http://52.62.218.244:9000/"
+                    SONAR_URL = "http://52.62.218.244:9000/"
                     }
                 steps{
                     withCredentials([string(credentialsId: 'Sonarcloud ', variable: 'SONAR_AUTH_TOKEN')]) {
