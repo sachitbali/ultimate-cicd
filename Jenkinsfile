@@ -25,5 +25,17 @@ pipeline{
                 sh 'mvn test'
             }
         }
+        stage('Sonar Analysis'){
+            environment{
+                scannerHome = tool 'sonar'
+            }
+            steps{
+                withSonarQubeEnv('sonar'){
+                    sh '''
+                    
+                    '''
+                }
+            }
+        }
     }
 }
